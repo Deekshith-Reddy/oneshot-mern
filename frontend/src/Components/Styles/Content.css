@@ -1,0 +1,109 @@
+.content {
+    flex: 1;
+    padding: 2% 3%;
+    
+}
+
+.colleges { 
+    display: flex;
+    flex-direction: column;
+    
+}
+.colleges__item__wrapper {
+   overflow: auto;
+   height: 70vh;
+   scrollbar-width: thin;
+   scrollbar-color: #6969dd #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 100px;
+}
+
+.colleges__item {
+    display: flex;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+    
+}
+
+.colleges__item__head {
+    margin-top: 2%;
+    background-color: #EEEEFF !important;
+    border-radius: 0.5rem;
+}
+
+.colleges__item:hover{
+    background-color: whitesmoke;
+}
+
+.colleges__item > p {
+    width: 25%;
+    padding: 0 3%;
+}
+
+.colleges__item__head > p{
+    font-weight: bold;
+}
+
+.students {
+    display: flex;
+    flex-direction: column;
+}
+
+.students__item__wrapper {
+    overflow: auto;
+   height: 70vh;
+   scrollbar-width: thin;
+   scrollbar-color: #6969dd #e0e0e0;
+}
+
+.students__item {
+    display: flex;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+}
+
+.students__item__head {
+    margin-top: 2%;
+}
+
+.students__item__head > p {
+    font-weight: bold;
+}
+
+.students__item:hover{
+    background-color: lightgray;
+}
+
+.students__item > p {
+    width: 30%;
+    padding: 0 3%;
+}
+
+.Students__item__head > p{
+    font-weight: bold;
+}
+
+.student {
+    margin-bottom: 7%;
+}
+
+.student__skills {
+    display: flex;
+}
+
+.student__skills p{
+    margin-top: 3%;
+    margin-right: 5%;
+}
+
+.student__avatar {
+    height: 100px !important;
+    width: 100px !important;
+    margin-bottom: 5%;
+}

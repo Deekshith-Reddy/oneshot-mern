@@ -1,0 +1,14 @@
+
+.leftDashBoard {
+    color: black;
+    background-color: white;
+    padding: 2% 3%;
+   width: 300px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.leftDashBoard__instructions {
+    margin-top: 10%;
+}
