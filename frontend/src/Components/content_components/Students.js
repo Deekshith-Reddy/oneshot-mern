@@ -13,6 +13,8 @@ function Students(props) {
         single = list[idx].students
     
     }
+
+
     
 
     return (

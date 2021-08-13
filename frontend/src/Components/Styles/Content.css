@@ -23,7 +23,7 @@
 .colleges__item {
     display: flex;
     padding-top: 3%;
-    padding-bottom: 2%;
+    padding-bottom: 3%;
     border-bottom: 1px solid lightgray;
     align-items: center;
     
@@ -46,6 +46,17 @@
 
 .colleges__item__head > p{
     font-weight: bold;
+}
+
+.colleges__founded {
+    font-weight: bold;
+    display: flex;
+}
+
+.sort__icon {
+    position: absolute;
+    cursor: pointer;
+    left: 43%;
 }
 
 .students {
