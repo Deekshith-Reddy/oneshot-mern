@@ -2,7 +2,8 @@ import React, {useState } from 'react'
 import { Link } from 'react-router-dom'
 import SortIcon from '@material-ui/icons/Sort'
 
-function Colleges( {list, city} ) {
+
+function Colleges( {list, city, loading} ) {
 
     const [currentSort, setCurrentSort ] = useState('default')
 
@@ -38,7 +39,7 @@ function Colleges( {list, city} ) {
 
     return (
         <div className="colleges">
-             <h1>Colleges in {city}</h1>
+             {loading? <img className="loading" src='/Spinner-1s-200px.gif' alt='loading...'></img> : <h1>Colleges in {city}</h1>}
              <div className="colleges__item colleges__item__head" key={-1}>
                  
                  <p>College Name</p>

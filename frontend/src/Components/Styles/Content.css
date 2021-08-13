@@ -20,6 +20,11 @@
     border-radius: 100px;
 }
 
+.loading {
+    height: 50px;
+    width: 50px;
+}
+
 .colleges__item {
     display: flex;
     padding-top: 3%;
@@ -30,7 +35,7 @@
 }
 
 .colleges__item__head {
-    margin-top: 2%;
+    margin-top: 4%;
     background-color: #EEEEFF !important;
     border-radius: 0.5rem;
 }
@@ -92,12 +97,18 @@
 }
 
 .students__item > p {
-    width: 30%;
-    padding: 0 3%;
+    width: 20%;
+    padding: 0 1%;
 }
 
 .Students__item__head > p{
     font-weight: bold;
+}
+
+.students__sort__icon {
+    position: absolute;
+    cursor: pointer;
+    left: 51%;
 }
 
 .student {

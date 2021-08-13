@@ -5,13 +5,16 @@ import {Link} from 'react-router-dom'
 function Student(props) {
 
     var single = null;
+    var students = []
     if(props.location.props){
         const idx = props.location.props.idx;
-        const students = props.location.props.list;
+        students = props.location.props.list;
 
         single = students[idx]
         //console.log(single)
     }
+
+    
     const [seed, setSeed] = useState("123");
 
     useEffect(() => {
@@ -33,7 +36,7 @@ function Student(props) {
                 </div>
             </div>
             : ""}
-            <Link to='/'>Go  Home</Link>
+            <Link to='/collegeslist'>Go  Home</Link>
         </div>
     )
 }

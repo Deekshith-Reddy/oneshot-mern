@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import '../Components/Styles/LeftDashboard.css'
 import EmbedSDK from '@mongodb-js/charts-embed-dom'
 
+
 function LeftDashboard({setQuery}) {
 
     useEffect(() => {
@@ -21,7 +22,7 @@ function LeftDashboard({setQuery}) {
                     setQuery(e.data.label.value)
                 })
             })
-            .catch((e) => console.log("damn " + e.message));
+            .catch((e) => console.log(e.message));
     }, [setQuery])
 
 
@@ -38,6 +39,7 @@ function LeftDashboard({setQuery}) {
     return (
         <div className="leftDashBoard">
             
+           
            
            <div id="chart" style={style}></div>
            <div className="leftDashBoard__instructions">

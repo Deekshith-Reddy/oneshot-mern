@@ -8,7 +8,7 @@ import RightDashboard from './Components/RightDashboard';
 function App() {
 
   const [query, setQuery] = useState("Hyderabad");
-  console.log(query+" this")
+  
   return (
     <div className="App">
       {/* Header */}

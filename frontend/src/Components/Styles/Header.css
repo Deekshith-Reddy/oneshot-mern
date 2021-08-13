@@ -8,3 +8,7 @@
     border-bottom: 4px solid #5667ec;
     background-image: url('https://static.wixstatic.com/media/2e23fe_e3cd7ba2bae94a5d8e06436fea510076~mv2.png/v1/fill/w_1583,h_939,al_c,q_90,usm_0.66_1.00_0.01/2e23fe_e3cd7ba2bae94a5d8e06436fea510076~mv2.webp');
 }
+
+.header__title {
+    color: white;
+}
