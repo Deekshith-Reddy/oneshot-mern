@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SortIcon from '@material-ui/icons/Sort'
 import {Input} from 'antd'
@@ -7,6 +7,9 @@ function Colleges( {list, city, loading} ) {
 
     const [currentSort, setCurrentSort ] = useState('default')
 
+    useEffect(() => {
+        setTempList(list)
+    },[list])
 
     const sortTypes = {
         up: {
@@ -44,7 +47,7 @@ function Colleges( {list, city, loading} ) {
          return item.name.toLowerCase().includes(target.toLowerCase())
         })
         setInput(target);
-        setTempList(filtered);
+        setTempList([...filtered]);
      }
     
     
@@ -58,7 +61,7 @@ function Colleges( {list, city, loading} ) {
              
              <div className="colleges__item colleges__item__head" key={-1}>
                  
-                 <p>College Name</p>
+                 <p>Name</p>
                  <p>Founded </p>
                  <SortIcon className="sort__icon" onClick={onSortChange}></SortIcon>
                  <p>City</p>

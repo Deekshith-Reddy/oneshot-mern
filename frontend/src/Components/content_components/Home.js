@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import axios from '../axios'
+import '../Styles/Home.css'
 
 function Home() {
 
     const [fullList, setFullList] = useState([])
     const [cities, setCities] = useState([]);
     const [count, setCount] = useState(0);
+    const [loading, setLoading] = useState(true)
 
     const getCities = () => {
         var distinct = []
@@ -28,25 +30,36 @@ function Home() {
     }
 
     useEffect(() => {
+        setLoading(true)
         async function fetchData() {
             const request = await axios.get(`/college`)
             //console.log(request)
             setFullList(request.data)
         }
+        setLoading(false)
         fetchData();
         getCities();
-        countStudents();
+    countStudents();
+        
     }, [fullList])
 
+    
+
     return (
-        <div className="Home">
-             <h1>Welcome to College Explorer</h1>
+        <div className="home">
+             <h1 className="home__display">Welcome to College Explorer</h1>
+             {loading ? <img alt="loading..." src='/Spinner-1s-200px.gif'></img>: 
+             
+             <div className="home__info">
+                <h2>From a list of {fullList.length} Colleges</h2>
+                <h3>Including Colleges from cities {cities.toString()}</h3>
+                <h3>With around {count} students and many number of courses</h3>
+             </div>
+             
+             }
+             
 
-             <h2>From a list of {fullList.length} Colleges</h2>
-             <h2>Including Colleges from cities {cities.toString()}</h2>
-             <h3>With around {count} students and many number of courses</h3>
-
-             <h3><Link to='/collegeslist'>Start Searching</Link></h3>
+             <h3 class="home__search"><Link to='/collegeslist'>Start Searching</Link></h3>
         </div>
     )
 }

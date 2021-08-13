@@ -14,6 +14,11 @@ a {
 .body {
   display: flex;
   justify-content: space-around;
-  font-family: 'Atkinson Hyperlegible', sans-serif;
-  height: 90vh;
+  /* font-family: 'Atkinson Hyperlegible', sans-serif; */
+  /* font-family: 'Dosis', sans-serif; */
+  /* font-family: 'Quicksand', sans-serif; */
+  /* font-family: 'Roboto', sans-serif; */
+
+  font-family: 'Rubik', sans-serif;
+  height: 100vh;
 }

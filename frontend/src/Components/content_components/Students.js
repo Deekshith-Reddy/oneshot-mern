@@ -64,19 +64,20 @@ function Students(props) {
             <div className="students__head">
                 {clgName? <h1>{clgName}</h1> : <h1 className="students__head__name">Random Institute of Technology</h1>}
                 <Input className="students__head__input" placeholder="Search for students" value={input} onChange={updateInput} />
+                <Link to='/collegeslist'><h4>Home</h4></Link>
             </div>
             
             <div className="students__item students__item__head">
                 <p>#</p>
-                <p>name</p>
-                <p>year</p>
+                <p>Name</p>
+                <p>Year</p>
                 <SortIcon className="students__sort__icon" onClick={onSortChange}></SortIcon>
-                <p>skills</p>
+                <p>Skills</p>
             </div>
             <div className="students__item__wrapper">
             {single? [...tempList].sort(sortTypes[currentSort].fn).map((item, idx) => (
                 <div className="students__item" key={idx}>
-                    <p>{idx+1}</p>
+                    <p>#{idx+1}</p>
                     <p>
                         <Link to={{
                             pathname: '/studentinfo',
@@ -90,7 +91,7 @@ function Students(props) {
                     <p>{item.year}</p>
                     <p>{item.skills.toString()}</p>
                 </div>
-            )): <Link to='/collegesList'>Go  Home</Link>}
+            )): ""}
             </div>
         </div>
     )

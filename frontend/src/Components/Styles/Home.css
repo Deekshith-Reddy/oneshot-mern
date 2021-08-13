@@ -1,0 +1,25 @@
+
+.home {
+    /* font-family: 'Atkinson Hyperlegible', sans-serif; */
+  /* font-family: 'Dosis', sans-serif; */
+  /* font-family: 'Quicksand', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+}
+
+.home__display {
+    margin-top: 2%;
+    font-size: 50px;
+}
+
+.home__info {
+    margin-top: 7%;
+}
+
+
+.home__info > h2,h3 {
+    margin-top: 3%;
+}
+
+.home__search {
+    margin-top: 5%;
+}

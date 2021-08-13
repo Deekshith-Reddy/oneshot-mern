@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 9000;
 
 app.get("/college", async (req, res) => {
     try{
-        const query = await College.find().limit(10);
+        const query = await College.find().limit();
         res.json(query)
     }catch (err) {
         res.json({message: err})
@@ -24,7 +24,7 @@ app.get("/college/similar/:city", async(req, res) => {
         search = "Hyderabad"
     }
     College.find({city:search})
-        .limit(15)
+        .limit()
         .exec((err, data) => {
             if(err) res.json({message: err})
             else res.json(data)

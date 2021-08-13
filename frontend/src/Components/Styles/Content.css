@@ -1,7 +1,6 @@
 .content {
     flex: 1;
     padding: 2% 3%;
-    
 }
 
 .colleges { 
@@ -18,6 +17,7 @@
 .colleges__head__input {
     width: 25%;
     height: 30px;
+    
 }
 
 .colleges__item__wrapper {
