@@ -9,6 +9,17 @@
     flex-direction: column;
     
 }
+
+.colleges__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colleges__head__input {
+    width: 25%;
+    height: 30px;
+}
+
 .colleges__item__wrapper {
    overflow: auto;
    height: 70vh;
@@ -82,6 +93,18 @@
     padding-bottom: 2%;
     border-bottom: 1px solid lightgray;
     align-items: center;
+}
+
+.students__head {
+    display: flex;
+    flex-direction: column;
+}
+
+.students__head__input {
+    margin-top: 2%;
+    width: 35%;
+    height: 30px;
+    align-self: flex-end;
 }
 
 .students__item__head {

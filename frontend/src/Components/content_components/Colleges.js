@@ -1,7 +1,7 @@
 import React, {useState } from 'react'
 import { Link } from 'react-router-dom'
 import SortIcon from '@material-ui/icons/Sort'
-
+import {Input} from 'antd'
 
 function Colleges( {list, city, loading} ) {
 
@@ -34,12 +34,28 @@ function Colleges( {list, city, loading} ) {
 
 		setCurrentSort(nextSort)
     };
+
+    const [input, setInput] = useState("");
+    const [tempList, setTempList] = useState(list);
+
+    const updateInput = (e) => {
+        var target = e.target.value;
+        const filtered = list.filter(item => {
+         return item.name.toLowerCase().includes(target.toLowerCase())
+        })
+        setInput(target);
+        setTempList(filtered);
+     }
     
     
 
     return (
         <div className="colleges">
-             {loading? <img className="loading" src='/Spinner-1s-200px.gif' alt='loading...'></img> : <h1>Colleges in {city}</h1>}
+            <div className="colleges__head">
+                {loading? <img className="loading" src='/Spinner-1s-200px.gif' alt='loading...'></img> : <h1>Colleges in {city}</h1>}
+                <Input className="colleges__head__input" placeholder="Search for Colleges" value={input} onChange={updateInput} />
+            </div>
+             
              <div className="colleges__item colleges__item__head" key={-1}>
                  
                  <p>College Name</p>
@@ -50,7 +66,7 @@ function Colleges( {list, city, loading} ) {
                  <p>Strength</p>
              </div>
              <div className="colleges__item__wrapper">
-           {[...list].sort(sortTypes[currentSort].fn).map((item, idx) => (
+           {[...tempList].sort(sortTypes[currentSort].fn).map((item, idx) => (
                <div className="colleges__item" key={idx}>
                    {/* <p>{item.id}</p> */}
                    <p >

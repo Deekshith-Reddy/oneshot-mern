@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import SortIcon from '@material-ui/icons/Sort'
+import {Input} from 'antd'
 
 function Students(props) {
     
@@ -45,10 +46,26 @@ function Students(props) {
 		setCurrentSort(nextSort)
     };
 
+    const [input, setInput] = useState("");
+    const [tempList, setTempList] = useState(single);
+
+    const updateInput = (e) => {
+        var target = e.target.value;
+        const filtered = single.filter(item => {
+         return item.name.toLowerCase().includes(target.toLowerCase())
+        })
+        setInput(target);
+        setTempList(filtered);
+     }
+
 
     return (
         <div className="students">
-            {clgName? <h1>{clgName}</h1> : <h1>Random Institute of Technology</h1>}
+            <div className="students__head">
+                {clgName? <h1>{clgName}</h1> : <h1 className="students__head__name">Random Institute of Technology</h1>}
+                <Input className="students__head__input" placeholder="Search for students" value={input} onChange={updateInput} />
+            </div>
+            
             <div className="students__item students__item__head">
                 <p>#</p>
                 <p>name</p>
@@ -57,7 +74,7 @@ function Students(props) {
                 <p>skills</p>
             </div>
             <div className="students__item__wrapper">
-            {single? [...single].sort(sortTypes[currentSort].fn).map((item, idx) => (
+            {single? [...tempList].sort(sortTypes[currentSort].fn).map((item, idx) => (
                 <div className="students__item" key={idx}>
                     <p>{idx+1}</p>
                     <p>
