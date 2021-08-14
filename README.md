@@ -15,6 +15,7 @@ to find students from a specific college and know details about a specific stude
 - Sort functionality by graduation year for students
 - Easy navigation between colleges and students through links
 
+
 ## Libraries used
 - React
 - React Router
@@ -23,6 +24,7 @@ to find students from a specific college and know details about a specific stude
 - Mongoose
 - Material UI
 - Ant
+
 
 
 ## Setting up on your local machine
@@ -35,6 +37,8 @@ to find students from a specific college and know details about a specific stude
 - Go in the `frontend` directory and do the same i.e run `npm run install`
 - After the libraries are installed use `node server.js` command to start the express server and run `npm start` inside frontend directory to start the react development server.
 - If you want to directly view the site it is hosted on heroku at [https://oneshot-mern.herokuapp.com/](https://oneshot-mern.herokuapp.com/).
+
+
 
 ## What's missing ?
 
