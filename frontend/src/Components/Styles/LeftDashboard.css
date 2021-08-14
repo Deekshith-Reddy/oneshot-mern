@@ -6,7 +6,11 @@
    width: 300px;
     display: flex;
     flex-direction: column;
-    
+    justify-content: flex-start;
+}
+
+#chart {
+
 }
 
 .leftDashBoard__instructions {

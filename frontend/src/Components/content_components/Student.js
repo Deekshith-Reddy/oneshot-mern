@@ -25,13 +25,13 @@ function Student(props) {
         <div className="student">
 
             {single? 
-            <div className="student">
+            <div className="student__section">
                 <Avatar className="student__avatar" src={`https://avatars.dicebear.com/api/human/${seed}.svg`}>D</Avatar>
                 <h1>{single.name}</h1>
                 <h3>{single.year}</h3>
                 <div className="student__skills">
-                {single.skills.map((item) => (
-                    <p>{item}</p>
+                {single.skills.map((item, idx) => (
+                    <p key={idx}>{item}</p>
                 ))}
                 </div>
             </div>

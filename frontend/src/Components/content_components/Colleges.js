@@ -55,7 +55,7 @@ function Colleges( {list, city, loading} ) {
     return (
         <div className="colleges">
             <div className="colleges__head">
-                {loading? <img className="loading" src='/Spinner-1s-200px.gif' alt='loading...'></img> : <h1>Colleges in {city}</h1>}
+                {loading? "" : <h1>Colleges in {city}</h1>}
                 <Input className="colleges__head__input" placeholder="Search for Colleges" value={input} onChange={updateInput} />
             </div>
              
@@ -68,6 +68,7 @@ function Colleges( {list, city, loading} ) {
                  <p>Country</p>
                  <p>Strength</p>
              </div>
+             {loading ? <img className="loading" src='/Spinner-1s-200px.gif' alt='loading...'></img> :
              <div className="colleges__item__wrapper">
            {[...tempList].sort(sortTypes[currentSort].fn).map((item, idx) => (
                <div className="colleges__item" key={idx}>
@@ -88,7 +89,7 @@ function Colleges( {list, city, loading} ) {
                     <p>{item.students.length}</p>
                </div>
            ))}
-           </div>
+           </div> }
         </div>
     )
 }

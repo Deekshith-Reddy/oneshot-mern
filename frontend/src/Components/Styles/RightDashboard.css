@@ -4,5 +4,12 @@
     background-blend-mode: color;
     background-color: white;
     padding: 2% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     
+}
+
+.rightDashBoard__title {
+    margin-top: 23%;
 }

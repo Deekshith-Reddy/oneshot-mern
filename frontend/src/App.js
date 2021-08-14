@@ -18,7 +18,7 @@ function App() {
           {/* Left */}
           <LeftDashboard setQuery={setQuery}/>
           {/* Middle */}
-          <Content query={query}/>
+          <Content query={query} setQuery={setQuery}/>
           {/* Right */}
           <RightDashboard />
       </div>

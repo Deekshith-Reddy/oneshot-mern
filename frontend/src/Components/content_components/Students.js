@@ -64,7 +64,7 @@ function Students(props) {
             <div className="students__head">
                 {clgName? <h1>{clgName}</h1> : <h1 className="students__head__name">Random Institute of Technology</h1>}
                 <Input className="students__head__input" placeholder="Search for students" value={input} onChange={updateInput} />
-                <Link to='/collegeslist'><h4>Home</h4></Link>
+                <Link to='/collegeslist'><h3 className="students__head__home">Home</h3></Link>
             </div>
             
             <div className="students__item students__item__head">

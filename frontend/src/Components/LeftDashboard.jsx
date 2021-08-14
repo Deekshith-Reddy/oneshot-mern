@@ -8,6 +8,7 @@ function LeftDashboard({setQuery}) {
     useEffect(() => {
         const sdk = new EmbedSDK({
             baseUrl: 'https://charts.mongodb.com/charts-colleges-vxiqa',
+            theme: "dark"
         })
     
         const chart = sdk.createChart({
@@ -39,12 +40,12 @@ function LeftDashboard({setQuery}) {
     return (
         <div className="leftDashBoard">
             
-           
+            <div className="leftDashBoard__instructions">
+               <h3>Click the cities on the below donut to get colleges by city</h3>
+           </div>
            
            <div id="chart" style={style}></div>
-           <div className="leftDashBoard__instructions">
-               <p>Click the cities on the above chart to get colleges by city</p>
-           </div>
+           
             
         </div>
     )
